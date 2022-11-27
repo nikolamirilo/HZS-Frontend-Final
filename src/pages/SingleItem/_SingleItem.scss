@@ -1,0 +1,121 @@
+.single-item-container {
+  padding: 10vh 12vw;
+  @include flex(column, center, center);
+  min-height: 100vh;
+  height: fit-content;
+  @include media($sm) {
+    padding: 5vh 3vw 20vh 3vw;
+  }
+  .single-item {
+    width: 100%;
+    @include grid(42% 50%);
+    gap: 8%;
+    @include media($sm) {
+      @include flex(column, none, none);
+      gap: 2%;
+    }
+    .left-content {
+      @include flex(column, center, center);
+      gap: 2vh;
+      .image {
+        @include backgroundObjectImage(100%, 70vh);
+        border-radius: 10px;
+        @include media($xs) {
+          @include backgroundObjectImage(100%, 55vh);
+        }
+      }
+      .image-stats {
+        @include flex(row, space-around, center);
+        width: 100%;
+        .likes,
+        .views,
+        .downloads {
+          @include flex(column, center, center);
+          h2 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+          }
+        }
+      }
+    }
+    .right-content {
+      padding: 5vh 0;
+      @include flex(column, flex-start, flex-start);
+      gap: 2vh;
+
+      .main-user-info {
+        @include flex(row, space-between, center);
+        @include media($xs) {
+          @include flex(row, space-around, center);
+        }
+        gap: 2rem;
+        .user-image {
+          @include backgroundObjectImage(6rem, 6rem);
+          border-radius: 100%;
+          @include border;
+        }
+        .user-name {
+          @include flex(column, flex-start, flex-start);
+          gap: 0.5rem;
+          @include media($xs) {
+            width: 50%;
+          }
+        }
+      }
+      .user-stats {
+        @include flex(row, space-between, center);
+        padding: 1rem 0;
+        width: 100%;
+        height: fit-content;
+        @include media($xs) {
+          @include flex(column, center, center);
+          width: 100%;
+          gap: 2rem;
+        }
+        .likes,
+        .photos,
+        .collections {
+          background-color: $white;
+          color: $black;
+          width: 8rem;
+          padding: 0.5rem 2rem;
+          border-radius: 20px;
+          @include flex(column, center, center);
+          @include media($xs) {
+            height: 5rem;
+            width: 70%;
+          }
+          p {
+            font-size: 1.2rem;
+            @include media($xs) {
+              font-size: 1.4rem;
+            }
+          }
+          h1 {
+            @include media($xs) {
+              font-size: 2.4rem;
+            }
+          }
+        }
+      }
+      .other-user-info {
+        @include flex(column, flex-start, flex-start);
+        gap: 2vh;
+        padding-left: 1vw;
+        span {
+          font-size: 1.2rem;
+        }
+        .user-location {
+          @include flex(row, space-between, center);
+          gap: 0.5rem;
+        }
+        .dates {
+          @include flex(column, flex-start, flex-start);
+          gap: 1rem;
+          span {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

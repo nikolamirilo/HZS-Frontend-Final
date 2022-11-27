@@ -1,0 +1,15 @@
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  @include flex(column, none, none);
+  position: relative;
+  .app {
+    padding: 4rem 0 4rem 0;
+    width: 100%;
+    height: 100%;
+    @include media($xs) {
+      padding-bottom: 6rem;
+    }
+  }
+}

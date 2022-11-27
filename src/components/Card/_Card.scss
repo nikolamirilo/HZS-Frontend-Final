@@ -1,0 +1,28 @@
+.card {
+  width: fit-content;
+  height: fit-content;
+  @include flex(row, center, center);
+  cursor: pointer;
+  position: relative;
+
+  img {
+    width: 100%; //REACT MASONRY GRID IMPORTANT FOR WORK
+    border-radius: 5px;
+    z-index: 0;
+  }
+  .delete-image {
+    color: $white;
+    background-color: rgb(255, 66, 66);
+    position: absolute;
+    border-radius: 100%;
+    padding: 0.2rem;
+    top: 2px;
+    right: 2px;
+    border: none;
+    z-index: 10;
+    &:focus {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

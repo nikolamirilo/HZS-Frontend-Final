@@ -1,0 +1,8 @@
+.items {
+  padding: 10vh 0vw;
+  @include flex(column, center, center);
+  gap: 10vh;
+  @include media($xs) {
+    padding: 10vh 0vw;
+  }
+}

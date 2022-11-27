@@ -1,0 +1,40 @@
+@import "./assets/sass/index";
+@import "./pages/index";
+@import "./components/index";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  span,
+  button,
+  a,
+  div {
+    font-family: Tahoma, sans-serif !important;
+  }
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $white;
+  border-radius: 0rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cd9600;
+  border-radius: 5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cd9600;
+}
